@@ -1,0 +1,190 @@
+/* ROOT CONTAINER — everything is scoped under this */
+.calendar-container {
+    background: rgba(0, 0, 0, 0.32);
+    width: 690px;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    user-select: none;
+    margin-top: 10px;
+    position: relative;
+    align-self: center;
+}
+
+/* HEADER */
+.calendar-header {
+    display: flex;
+    padding: 15px 20px 8px;
+}
+
+.calendar-current-date {
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin: 0 auto;
+}
+
+/* NAVIGATION */
+.navigationContainer{
+    display: flex;
+    position: absolute;
+    width: calc(100% - 40*2px);
+    top: 15px;
+    left: 40px;
+    justify-content: space-between;
+}
+
+.calendar-navigation {
+
+}
+
+.calendar-navigation span {
+    height: 30px;
+    width: 30px;
+    margin: 0 2px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    user-select: none;
+    color: #aeabab;
+    font-size: 1.4rem;
+}
+
+.calendar-navigation span:hover {
+    background: #f2f2f2;
+    color: #484747;
+}
+
+/* BODY */
+.calendar-body {
+    padding: 10px;
+    width: 270px;
+}
+
+.calendar-body ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.calendar-weekdays li {
+    width: calc(100% / 7);
+    font-weight: 500;
+    font-size: 0.85rem;
+    cursor: default;
+}
+
+/* DATES */
+.calendar-dates {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.calendar-dates li {
+    width: calc(100% / 7);
+    height: 30px;
+    line-height: 30px;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+    color: white;
+    z-index: 1;
+}
+
+/*SELECTED DAYS*/
+.calendar-dates li.selected {
+    color: #aaa;
+    cursor: pointer;
+}
+
+.calendar-dates li.selected::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(74, 74, 74);
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 30px;
+    border-radius: 0;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    z-index: -1;
+}
+
+/* INACTIVE DAYS */
+.calendar-dates li.inactive {
+    color: #aaa;
+    cursor: default;
+}
+
+.calendar-dates li::before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* HOVER (non-active, non-highlight) */
+.calendar-dates li:not(.active):not(.highlight):not(.inactive):not(.selected):hover::before {
+    background: rgba(133, 132, 132, 0.22);
+}
+
+/* SELECTED DAY */
+.calendar-dates li.highlight {
+    position: relative;
+    color: #000000;
+}
+
+.calendar-dates li.highlight::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.89);
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ffffff;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    z-index: -1;
+}
+
+.calendar-dates li.highlight.startDateStyle::before {
+    border-radius: 50% 0 0 50%;
+}
+
+.calendar-dates li.highlight.endDateStyle::before {
+    border-radius: 0 50% 50% 0;
+}
+
+.priceCalc{
+    width: 640px;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    background-color: rgba(112, 112, 112, 0.18);
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.58);
+    animation: fadeIn 0.5s;
+    position: relative;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; top: -25px}
+    to {opacity: 1; top: 0}
+}
+

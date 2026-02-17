@@ -1,0 +1,188 @@
+.separator{
+    height: 0;
+    border-top: 1px solid rgba(53, 53, 53, 0.5);
+    width:90%;
+    margin-bottom:10px;
+    margin-top:15px;
+    align-self: center;
+}
+
+
+.summaryBox{
+    align-self: center;
+    width: 84%;
+    background-color: rgba(128, 128, 128, 0.72);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    flex-shrink: 0;
+}
+
+.summaryBox .header{
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.reviewGroup{
+    display:flex;
+    flex-direction:row;
+    margin-top: 15px;
+}
+
+.reviewGroup .icon{
+    height: 30px;
+    width: 30px;
+    margin-left: 30px;
+    filter: invert(1);
+    margin-top: 8px;
+}
+
+.reviewGroup .textSection{
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.itemGrid{
+    height: 100px;
+    width: 90%;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    row-gap: 15px;
+}
+
+.hotelInfo{
+    display: flex;
+    margin-top: 8px;
+}
+
+.hotelInfo .icon{
+    height: 30px;
+    width: 30px;
+    margin-left: 30px;
+    filter: invert(1);
+    margin-top: 15px;
+    float: left;
+}
+
+.hotelInfo .textSection{
+    display: flex;
+    flex-direction: column;
+    float: right;
+    margin-left: 15px;
+}
+
+.hotelInfo .textSection .title{
+    white-space: nowrap;
+    margin-bottom: 5px;
+}
+
+.hotelInfo .textSection .input{
+    background-color: rgba(255, 255, 255, 0.18);
+    height: 36px;
+    border: none;
+    border-radius: 15px;
+    color: #ffffff;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 5px;
+}
+
+.hotelInfo .textSection .input::placeholder {
+    color: rgb(204, 204, 204);
+}
+
+.hotelInfo .textSection .footer{
+    font-weight: 500;
+    font-size: 11px;
+}
+
+.summaryBox .priceLine{
+    display: flex;
+    align-self: center;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.summaryBox .priceLine .label,
+.summaryBox .priceLine .price {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.header{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+
+.smallHeader{
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 6px;
+    margin-left: 5%;
+}
+
+.contactInfoGroup{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 13px;
+    margin-left: 8%;
+}
+
+.contactInfoGroup .headerSection{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    display: flex;
+    gap: 8px;
+    margin-left: 8px;
+}
+
+.contactInfoGroup .headerSection .img{
+    filter: invert(1);
+    height: 16px;
+    width: 16px;
+    align-self: center;
+}
+
+
+
+.contactInfoGroup .input{
+    background-color: rgba(255, 255, 255, 0.18);
+    height: 39px;
+    width: 50%;
+    border: none;
+    border-radius: 13px;
+    color: #ffffff;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.contactInfoGroup .input::placeholder {
+    color: rgb(204, 204, 204);
+}
+
+.contactInfoGroup .footer{
+    font-weight: 500;
+    font-size: 11px;
+    margin-left: 8px;
+}
+
+.errorMsg{
+    position: relative;
+    opacity: 0;
+    font-weight: 500;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.87);
+    transform: translateY(15px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.showErrorMsg{
+    opacity: 1;
+    transform: translateY(0);
+}

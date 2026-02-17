@@ -1,0 +1,67 @@
+.pageHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2.5%;
+    width: 95%;
+    height: 80px;
+    position: fixed;
+    top: 10px;
+    color: #e3e3e3;
+    border-radius: 30px;
+    z-index: 3;
+
+    backdrop-filter: blur(0px);
+    transition:
+            backdrop-filter 0.2s ease,
+            background-color 0.2s ease;
+}
+
+.pageHeaderTop{
+    composes: pageHeader;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.pageHeaderBelow{
+    composes: pageHeader;
+    background-color: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(36px);
+}
+
+.pageHeaderText{
+    cursor: pointer;
+    user-select: none;
+}
+.pageHeaderText:hover{
+    color: #b8b7b7;
+}
+
+.pageHeaderBookButton{
+    background-color: rgb(28, 48, 128);
+    border-radius: 30px;
+}
+
+.pageHeaderLeft{
+    display: flex;
+    margin-left: 40px;
+}
+
+.pageHeaderRight {
+    display: flex;
+    margin-right: 40px;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    font-weight: 550;
+}
+
+.gapBetween {
+    width: 5px;
+}
+
+.headerImg{
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    opacity: 0.8;
+}

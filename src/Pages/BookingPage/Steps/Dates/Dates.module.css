@@ -1,0 +1,135 @@
+.header{
+    align-self: flex-start;
+    margin-left: 55px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.titleHeader{
+    composes: header;
+    margin-top: 25px;
+    font-weight: 500;
+    font-size: 21px;
+}
+
+.verticalGap{
+    margin-top: 38px;
+}
+
+.selectionsContainer{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 80%;
+    gap: 11px;
+    margin-top: 10px;
+}
+
+.selection{
+    display: flex;
+    border: rgba(255, 255, 255, 0.47) solid 2px;
+    height: 80px;
+    border-radius: 15px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.selection:hover{
+    border: rgb(255, 255, 255) solid 2px;
+    background-color: rgba(255, 255, 255, 0.07);
+    cursor: pointer;
+}
+
+.selection:active {
+    background-color: rgba(230, 233, 239, 0);
+}
+
+.selectionClicked{
+    composes: selection;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: rgb(255, 255, 255) solid 2px;
+}
+
+.timesContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.timePicker{
+    width: 250px;
+    height: 50px;
+    border: rgba(255, 255, 255, 0.47) solid 2px;
+    border-radius: 20px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    font-weight: 500;
+}
+
+.timePicker:hover{
+    border: rgb(255, 255, 255) solid 2px;
+    cursor: pointer;
+}
+
+.timePickerTime{
+    font-size: 21px;
+}
+
+.timePickerTitleText{
+    position: absolute;
+    bottom: 60px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+.timeSelectionPanel{
+    position: absolute;
+    bottom: 60px;
+    width: 110%;
+    height: 250px;
+    background-color: rgb(214, 214, 214);
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1;
+    border-radius: 20px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    animation: fadeIn 0.1s;
+}
+
+.timeSelectionPanel div{
+    color: black;
+    font-size: 1.2em;
+    width: 70%;
+    padding: 0 10%;
+    z-index: 2;
+    border-radius: 10px;
+    user-select: none;
+    font-weight: 500;
+}
+
+.timeSelectionPanel div:hover{
+    background-color: rgb(50, 50, 50);
+    color: #ffffff;
+    text-shadow: white 0 0 30px;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; bottom: 40px}
+    to {opacity: 1; bottom: 60px}
+}
+
+@keyframes panelFadeIn {
+    from {opacity: 0; top: calc(50% + 30px);}
+    to {opacity: 1; top: 50%}
+}

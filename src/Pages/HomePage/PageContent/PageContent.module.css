@@ -1,0 +1,413 @@
+.mainImgContainer{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: block;
+}
+
+.mainImgContainer > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.24);
+}
+
+.featGroup{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 27%;
+    transform: translateX(-50%);
+    justify-content: space-between;
+    align-items: center;
+    width: 470px;
+}
+
+.featIcon{
+    width: 1em;
+    height: 1em;
+    filter: invert(100%);
+}
+
+.feat{
+    width: 130px;
+    height: 31px;
+    border-radius: 30px;
+    outline: 1.3px solid #919191;
+    background-color: rgba(0, 0, 0, 0.13);
+    backdrop-filter: blur(10px);
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+    gap: 5px;
+    user-select: none;
+}
+
+.mainText{
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+
+.mainTextHeader{
+    color: white;
+    font-size: 80px;
+    font-weight: 500;
+    text-shadow: rgb(0, 0, 0) 0 0 10px;
+    font-family: "EB Garamond", serif;
+}
+
+.mainSubText{
+    text-align: center;
+    color: white;
+    font-size: 21px;
+    font-weight: 500;
+    text-shadow: rgb(0, 0, 0) 0 0 5px;
+    font-family: "EB Garamond", serif;
+}
+
+.buttonsContainer{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    left: 50%;
+    top: 65%;
+    transform: translateX(-50%);
+    gap: 20px;
+}
+
+.mainButton{
+    height: 60px;
+    width: 250px;
+    border-radius: 20px;
+    outline: 1.5px solid #8e8e8e;
+    backdrop-filter: blur(10px);
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s ease-in-out;
+    font-size: 18px;
+}
+
+.bookDirectButton{
+    composes: mainButton;
+    background-color: rgb(28, 48, 128);
+}
+
+.bookDirectButton:hover{
+    background-color: rgba(28, 48, 128, 0.37);
+}
+
+.bookOnTuroButton{
+    composes: mainButton;
+    background-color: rgba(0, 0, 0, 0.13);
+}
+
+.bookOnTuroButton:hover{
+    background-color: rgba(255, 255, 255, 0.36);
+}
+
+.redirectIcon {
+    width: 18px;
+    height: 18px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 3h6v6'/%3E%3Cpath d='M10 14 21 3'/%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/%3E%3C/svg%3E")
+    no-repeat center / contain;
+    margin-left: 10px;
+    filter: invert(100%);
+}
+
+.detailsSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*noinspection CssUnknownTarget*/
+    background-image: url("/jeep-sunset-view-optimized-k8tBFkha.webp");
+    height: 75vh;
+}
+
+.circularHeader {
+    display: inline-flex;
+    background-color: rgb(28, 48, 128);
+    width: 110px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+
+.header{
+    font-weight: 600;
+    font-size: 35px;
+    font-family: "EB Garamond", serif;
+}
+
+.subText{
+    font-weight: 500;
+    font-size: 15px;
+    width: 550px;
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.detailsContainer{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+
+.detailBox{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 210px;
+    width: 210px;
+    border-radius: 20px;
+
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(25px);
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+
+    transition: all 0.1s ease-in-out;
+}
+
+.detailBox .icon{
+    height: 40px;
+    width: 40px;
+    margin-bottom: 20px;
+}
+
+.detailBox .title{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.detailBox .description{
+    font-weight: 500;
+    font-size: 12px;
+    width: 80%;
+}
+
+.detailBox:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 11px 22px 5px rgba(0, 0, 0, 0.51);
+}
+
+
+.gallerySection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*noinspection CssUnknownTarget*/
+    background-image: url("https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/clouds-over-kealakekua-bay-hawaii-alvis-upitis.jpg");
+    background-position: 50% 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 120vh;
+}
+
+.imagesContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    cursor: default;
+}
+
+.galleryImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+
+    transition: all 0.2s ease-in-out;
+}
+
+
+.imgWrapper {
+    position: relative;
+    height: 210px;
+    width: 270px;
+    border-radius: 20px;
+    overflow: hidden;
+    user-select: none;
+}
+
+/* Dark overlay */
+.imgWrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Text */
+.overlayText {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+    z-index: 5;
+    transform: translateY(10px);
+}
+
+
+/* Hover effects */
+.imgWrapper:hover .galleryImg {
+    filter: brightness(0.8);
+    scale: 105%;
+}
+
+.imgWrapper:hover::after {
+    opacity: 1;
+}
+
+.imgWrapper:hover .overlayText {
+    opacity: 1;
+    transform: translateY(0); /* move into place */
+}
+
+
+.ourPromiseSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*noinspection CssUnknownTarget*/
+    background-image: url("jeep-photo-1-8zjNycQC.avif");
+    background-position: 50% 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 120vh;
+    color: white;
+}
+
+.ourPromiseSection .advantagesContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    cursor: default;
+}
+
+.ourPromiseSection .advantagesContainer .advantageBox{
+    display: flex;
+    position: relative;
+    height: 140px;
+    width: 350px;
+    border-radius: 20px;
+
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(16px);
+    align-items: center;
+    justify-content: center;
+    color: black;
+    gap: 15px;
+
+    transition: all 0.1s ease-in-out;
+}
+
+.ourPromiseSection .advantagesContainer .advantageBox .icon{
+    height: 40px;
+    width: 40px;
+}
+
+.ourPromiseSection .advantagesContainer .advantageBox .textSection{
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ourPromiseSection .advantagesContainer .advantageBox .textSection .title{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.ourPromiseSection .advantagesContainer .advantageBox .textSection .label{
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.ourPromiseSection .advantagesContainer .advantageBox:hover {
+    box-shadow: 0 11px 22px 5px rgba(0, 0, 0, 0.51);
+    transform: translateY(-5px);
+}
+
+
+.footerSection{
+    height: 400px;
+    width: 100%;
+}
+
+.footerSection .footerItemsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
+    gap: 150px;
+}
+
+.footerSection .footerItemsContainer .footerItem{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footerSection .footerItemsContainer .footerItem .title{
+    color: white;
+}
+
+.footerSection .footerItemsContainer .footerItem .link{
+    color: #bfbfbf;
+}
+
+.footerSection .footerCopyright{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+.separator{
+    border:none;
+    height:1px;
+    width:70%;
+    background-color: rgba(255, 255, 255, 0.34);
+    margin: 15px auto 30px;
+}

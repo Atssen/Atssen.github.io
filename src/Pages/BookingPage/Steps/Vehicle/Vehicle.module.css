@@ -1,0 +1,9 @@
+.VehiclesContainer {
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    /*scrollbar-color: rgba(255, 255, 255, 0.64) rgba(241, 241, 241, 0);*/
+}
